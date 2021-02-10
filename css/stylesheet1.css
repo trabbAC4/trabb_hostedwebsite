@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+
+.WebContainer{
+    width:100%;
+    min-width:1000px;
+    height:auto;
+}
+
 #border{
   border-radius: 25px;
   background: #FFC0CB;
