@@ -1,0 +1,202 @@
+<!Doctype html>
+<html>
+<head>
+<title> Hosted Website </title>
+<link rel="stylesheet" type="text/css" href="css/stylesheet1.css" />
+<body>
+<script>
+
+	var first_name = prompt("Hello, please record your first name");
+	var last_name = prompt ("Please record your last name");
+	prompt("It is a pleasure to meet you " + first_name + " " + last_name + ". Feel free to enjoy this website :). Press ok to enter");
+
+</script>
+<div id= "border">
+<h3> <p id= "beginner"> Greetings! Please take a look at my webpage </h3> </p>
+</div>
+<h2>
+<p style = "text-align:center"> Here's a short introduction of me </p>
+</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#F7CAC9;">
+    <h2>I am currently a junior in NYU majoring in Computer Engineering</h2>
+    <img src="pics/nyu.jpg" alt = "nyu" class = "aboutme" </img>
+  </div>
+  <div class="column" style="background-color:#92A8D1;">
+    <h2>I love coding as well as learning new skills and things!</h2>
+    <img src ="pics/cs.png" alt ="skills" class ="aboutme" </img>
+  </div>
+  <div class="column" style="background-color:#45B8AC;">
+    <h2>I'm a big fan of basketball and anime</h2>
+    <img src ="pics/basketball.jpg" alt ="ball" class ="aboutme" </img>
+  </div>
+  <div class="column" style="background-color:#CD447A;">
+    <h2>I hope to build a startup in the future </h2>
+    <img src ="pics/lightbulb.jpg" alt ="lightbulb" class ="aboutme" </img>
+  </div>
+</div>	
+<h2>
+<br> </br>
+<p style= "text-align:center"> Hover over the rainbow color spectrum </p> </h2>
+
+<div class="rainbow" style= "background-color: #DC143C" >red</div><br>
+<div class="rainbow" style = "background-color: #FFA500">orange</div><br>
+<div class="rainbow" style = "background-color: #FFFF00" >yellow</div><br>
+<div class="rainbow" style="background-color: #2E8B57">green</div><br>
+<div class="rainbow" style= "background-color: #4169E1">blue</div><br>
+<div class ="rainbow" style= "background-color: #4B0082">indigo</div> <br>
+<div class ="rainbow" style = "background-color: #EE82EE">violet</div> <br>
+
+
+<br> </br>
+<br> </br>
+<h1>
+<p style= "text-align:center"> Try some javascript projects I made! </p>
+</h1>
+
+<script>
+
+var isOn = false; //global variable
+function changeImage() {
+	var image = document.getElementById('bulb');
+	if (isOn) {
+		image.src = "pics/light_bulb_off.jpg";
+		isOn = false;
+	}
+	else {
+		image.src = "pics/light_bulb_On.jpg";
+		isOn = true;
+	}
+}
+function changeCaption() {
+	var caption = document.getElementById('myCaption');
+	if (isOn){
+		caption.innerHTML = "Let there be light";
+	}
+	else {
+		caption.innerHTML = "In the beginning there was darkness"
+	}
+}
+var i=0;
+function counter(){
+	i++;
+	var cntr= document.getElementById("c")
+	cntr.innerHTML = i;
+}
+function lightSwitch() {
+	changeImage();
+	changeCaption();
+	counter()
+}
+
+</script>
+<div id = "light">
+<h1 id ="myCaption"> In the beginning there was darkness</h1>
+<img id="bulb" onmouseover="lightSwitch()" onmouseout="lightSwitch()" src="pics/light_bulb_off.jpg">
+<p>Put mouse over the light bulb to turn on the light.</p>
+<p>Counter: <span id='c'>0</span></p>
+</div>
+
+<h1> Try this calculator </h1>
+First Number:<br>
+<input id="firstnum" type="text" name="firstnumber">
+<br>
+Second Number:<br>
+<input id="secondnum" type="text" name="secondnumber">
+<h1>Operation to Perform</h1>
+<input id="add" type="radio" name="operation" value="add">Add<br>
+<input id="subtract" type="radio" name="operation" value="subtract">Subtract<br>
+<input id="multiply" type="radio" name="operation" value="multiply">Multiply<br>
+<input id="divide" type="radio" name="operation" value="divide">Divide
+</form>
+<br>
+<button onclick="main()">Submit</button>
+<br><br>
+<button onclick="reset()">Reset</button>
+<h1> The result will be <span id="result"></span></h1>
+<script src="js/calculator.js"></script>
+
+<p> <h1> Try this input table </p> </h1>
+<form>
+First Name:<br>
+<input id="firstname" type="text" name="firstname"><br>
+Last Name:<br>
+<input id="lastname" type="text" name="lastname"><br>
+</form>
+<br>
+<button onclick="original()">Submit</button>
+<br><br>
+
+<table border=1 id="table">
+<tr>
+<td>#</td>
+<td>First Name</td>
+<td>Last Name</td>
+</tr>
+</table>
+<script>
+
+
+var c=1
+function original(){
+	var a=document.getElementById("firstname").value
+	var b=document.getElementById("lastname").value
+	var table=document.getElementById("table")
+	var row=table.insertRow(c)
+	var cell1=row.insertCell(0)
+	var cell2=row.insertCell(1)
+	var cell3=row.insertCell(2)
+	cell1.innerHTML=c
+	cell2.innerHTML=a
+	cell3.innerHTML=b
+	c+=1
+}
+function reset(){
+	var table=document.getElementById("table")
+	for(var i=table.rows.length-1;i>0;i--){
+	table.deleteRow(i)}
+	c=1
+}
+</script>
+<br> 
+</br>
+
+<form action="https://www.allstarcode.org/" method="get" target="_blank">
+         <button type="submit">Click this button for good luck!</button> </form>
+
+
+
+<h1> <p style= "text-align:center">Here is a look at all of my prior experiences </p> </h1>
+
+<div class="gallery">
+  <a target="_blank" href="pics/hackathon.png">
+    <img src="pics/hackathon.png" alt="=hackathon" width="600" height="400">
+  </a>
+  <div class="desc">I was a participant of the annual MTA hackathon hosted by Microsoft </div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="pics/LeetCode.png">
+    <img src="pics/LeetCode.png" alt="leetcode" width="600" height="400">
+  </a>
+  <div class="desc">I attended a LeetCode bootcamp that was hosted at my college in order to develop my technical interview skills</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="pics/data_analytics.png">
+    <img src="pics/data_analytics.png" alt="data" width="600" height="400">
+  </a>
+  <div class="desc">I also attended a Data Analytics bootcamp that was hosted at my college in order to develop my data analytics skills </div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="pics/scip.png">
+    <img src="pics/scip.png" alt="scip" width="600" height="300">
+  </a>
+  <div class="desc">I was a web and app development at SCIP (Selective Corporate Internship Program) hosted at Microsoft revamping the current SCIP website. </div>
+</div>
+</body> 
+
+</html>
+
